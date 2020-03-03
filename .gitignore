@@ -1,4 +1,6 @@
 *.pyc
 *.swp
 db.sqlite3
+yarn-error.log
 .vagrant/
+node_modules/
