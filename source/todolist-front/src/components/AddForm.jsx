@@ -24,9 +24,9 @@ export default class AddForm extends Component {
         if (this.state.task === '') {
             return;
         }
-        // this.setState({
-        //     task: ''
-        // });
+        this.setState({
+            task: ''
+        });
         this.props.createTask(this.state.task);
     }
 
