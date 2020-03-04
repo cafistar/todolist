@@ -32,3 +32,18 @@ class TestTaskListView:
                 'content': 'taskB',
             }
         ]
+
+
+@pytest.mark.django_db(transaction=True)
+class TestTaskCreateView:
+
+    def test_it(self):
+        from apps.task.models import Task
+
+        client = APIClient()
+        res = client.post(reverse('task:create'), {
+            'content': 'new task',
+        })
+
+        assert res.status_code == 201
+        assert res.data['content'] == 'new task'
