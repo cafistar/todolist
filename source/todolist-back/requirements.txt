@@ -1,6 +1,7 @@
 asgiref==3.2.3
 attrs==19.3.0
 Django==3.0.3
+django-cors-headers==3.2.1
 djangorestframework==3.11.0
 entrypoints==0.3
 factory-boy==2.12.0
